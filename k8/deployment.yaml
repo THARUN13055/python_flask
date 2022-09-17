@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+spec:
+  selector:
+    matchLabels:
+      app: flask
+  template:
+    metadata:
+      labels:
+        app: flask
+    spec:
+      containers:
+        - name: my-contaier
+          image: tharun13055/python_flask:v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000

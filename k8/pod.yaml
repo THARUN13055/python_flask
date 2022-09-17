@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pods
+metadata:
+  name: my-flask
+  labels:
+    app: flask
+spec:
+  containers:
+    - name: my-contaier
+      image: tharun13055/python_flask:v1
+      ports:
+        - containerPort: 5000
+      imagePullPolicy: Always
